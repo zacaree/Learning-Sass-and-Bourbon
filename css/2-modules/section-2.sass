@@ -1,0 +1,42 @@
+
+.section-2
+   +outer-container
+   margin:
+      top: 30px
+      bottom: 30px
+
+   aside, article
+      height: 100px
+      margin:
+         top: 10px
+         bottom: 10px
+
+   aside
+      background: tomato
+
+   article
+      background: $MediumSpringGreen
+
+   .first
+      +span-columns(2)
+   .second
+      +span-columns(10)
+   .third
+      +span-columns(4)
+   .fourth
+      +span-columns(8)
+   .fifth
+      +span-columns(6)
+   .sixth
+      +span-columns(6)
+   .seventh
+      +span-columns(8)
+   .eighth
+      +span-columns(4)
+   .ninth
+      +span-columns(10)
+   .tenth
+      +span-columns(2)
+
+   .second, .fourth, .sixth, .eighth, .tenth
+      +omega

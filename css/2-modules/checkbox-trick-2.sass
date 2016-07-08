@@ -1,0 +1,66 @@
+// Top Nav
+
+.page-content
+   position: relative
+   z-index: 0
+   transition: 0.3s ease-in-out
+
+
+.sidebar
+   z-index: 1
+   transition: 0.3s ease-in-out
+   +position(fixed, -60px 0 0 0)
+
+   ul
+      display: flex
+      background: #333
+
+   li
+      flex: 3
+      text-align: center
+      color: rgba(255, 255, 255, 0.7)
+      font-family: "Ubuntu", sans-serif
+      font-weight: 500
+      font-size: 16px
+      -webkit-font-smoothing: antialiased
+      cursor: pointer
+      +padding(18px 0 18px 0)
+      border-bottom: 1px solid #222
+      transition: 0.3s
+
+      &:hover
+         color: #333
+         background: $MediumSpringGreen
+
+      &:active
+         background: darken($MediumSpringGreen, 10%)
+
+   .social
+      flex: 1
+
+
+.toggle-button
+   +size(0px, 0px)
+   text-decoration: none
+   color: #333
+   +position(fixed, 20px 0 0 24px)
+   z-index: 2
+   transition: 0.3s ease-in-out
+
+   &:hover
+      color: $MediumSpringGreen
+
+
+#checker
+   display: none
+
+   &:checked + .page-wrap
+
+      .sidebar
+         top: 0px
+
+      .toggle-button
+         top: 80px
+
+      .page-content
+         padding-top: 60px
